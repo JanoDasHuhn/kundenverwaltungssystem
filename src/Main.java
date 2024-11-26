@@ -1,5 +1,8 @@
+import kunden.JuristischePerson;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        JuristischePerson siemens = new JuristischePerson("siemens","Wolrad Kreusler Straße 6",2,2,1,true,"Hauptstraße 8");
+
     }
 }
