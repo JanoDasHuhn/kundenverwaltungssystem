@@ -24,4 +24,10 @@ public class JuristischePerson extends Kunde{
     public boolean isPremiumkunde() {
         return false;
     }
+
+    @Override
+    public void ergänzeBestellung(Bestellung bestellung) {
+        bestellungen.add(bestellung);
+
+    }
 }

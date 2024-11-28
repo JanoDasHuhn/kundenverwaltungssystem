@@ -26,4 +26,7 @@ abstract class Kunde {
         this.bestellungen = bestellungen;
         this.ID = ID;
     }
+
+
+    public abstract void ergänzeBestellung(Bestellung bestellung);
 }
