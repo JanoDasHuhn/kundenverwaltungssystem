@@ -1,12 +1,15 @@
 package kunden;
 
 import Bestellung.Adresse;
+import Bestellung.Bestellung;
+
+import java.util.List;
 
 public class JuristischePerson extends Kunde{
     private Boolean isKapitalgesellschaft;
     private Adresse lieferadresse;
-    public JuristischePerson(String name, Adresse adresse,int bisherigesbestellvolumen,int anzahlbestellungen,int ID,boolean isKapitalgesellschaft,String lieferadresse){
-        super(name,adresse,bisherigesbestellvolumen,anzahlbestellungen,ID);
+    public JuristischePerson(String name, Adresse adresse, List<Bestellung> bestellungen, int ID, boolean isKapitalgesellschaft, String lieferadresse){
+        super(name,adresse,bestellungen,ID);
         this.isKapitalgesellschaft = isKapitalgesellschaft;
         this.lieferadresse = adresse;
 

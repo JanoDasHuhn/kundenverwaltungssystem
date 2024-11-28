@@ -1,12 +1,15 @@
 package kunden;
 
 import Bestellung.Adresse;
+import Bestellung.Bestellung;
+
+import java.util.List;
 
 abstract class Kunde {
     protected String name;
     protected Adresse adresse;
-    protected int bisherigesBestellvolumen;
-    protected int anzahlBestellungen;
+    protected List<Bestellung> bestellungen;
+
     protected int ID;
 
 
@@ -16,11 +19,11 @@ abstract class Kunde {
 
     public abstract boolean isPremiumkunde();
 
-    public Kunde(String name,Adresse adresse,int bisherigesBestellvolumen,int anzahlBestellungen,int ID){
+    public Kunde(String name,Adresse adresse,List<Bestellung> bestellungen,int ID){
         this.name = name;
         this.adresse = adresse;
-        this.bisherigesBestellvolumen = bisherigesBestellvolumen;
-        this.anzahlBestellungen = anzahlBestellungen;
+
+        this.bestellungen = bestellungen;
         this.ID = ID;
     }
 }
