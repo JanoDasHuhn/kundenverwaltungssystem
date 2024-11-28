@@ -10,7 +10,7 @@ public class Artikel {
     }
 
     public int getArtikelnummer() {
-        return artikelnummer;
+        return artikelNummer;
     }
 
     public String getArtikelName() {
