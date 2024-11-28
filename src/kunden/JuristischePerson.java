@@ -1,18 +1,20 @@
 package kunden;
 
+import Bestellung.Adresse;
+
 public class JuristischePerson extends Kunde{
     private Boolean isKapitalgesellschaft;
-    private String lieferadresse;
-    public JuristischePerson(String name, String adresse,int bisherigesbestellvolumen,int anzahlbestellungen,int ID,boolean isKapitalgesellschaft,String lieferadresse){
+    private Adresse lieferadresse;
+    public JuristischePerson(String name, Adresse adresse,int bisherigesbestellvolumen,int anzahlbestellungen,int ID,boolean isKapitalgesellschaft,String lieferadresse){
         super(name,adresse,bisherigesbestellvolumen,anzahlbestellungen,ID);
         this.isKapitalgesellschaft = isKapitalgesellschaft;
-        this.lieferadresse = lieferadresse;
+        this.lieferadresse = adresse;
 
     }
 
     @Override
-    public String lieferePostanschrift() {
-        return "";
+    public Adresse lieferePostanschrift() {
+        return adresse;
     }
 
     @Override

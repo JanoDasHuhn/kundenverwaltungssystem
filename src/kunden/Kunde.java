@@ -1,8 +1,10 @@
 package kunden;
 
- abstract class Kunde {
+import Bestellung.Adresse;
+
+abstract class Kunde {
     protected String name;
-    protected String adresse;
+    protected Adresse adresse;
     protected int bisherigesBestellvolumen;
     protected int anzahlBestellungen;
     protected int ID;
@@ -10,11 +12,11 @@ package kunden;
 
 
 
-    public abstract String lieferePostanschrift();
+    public abstract Adresse lieferePostanschrift();
 
     public abstract boolean isPremiumkunde();
 
-    public Kunde(String name,String adresse,int bisherigesBestellvolumen,int anzahlBestellungen,int ID){
+    public Kunde(String name,Adresse adresse,int bisherigesBestellvolumen,int anzahlBestellungen,int ID){
         this.name = name;
         this.adresse = adresse;
         this.bisherigesBestellvolumen = bisherigesBestellvolumen;
