@@ -10,23 +10,46 @@ abstract class Kunde {
     protected Adresse adresse;
     protected List<Bestellung> bestellungen;
 
-    protected int ID;
+
 
 
 
 
     public abstract Adresse lieferePostanschrift();
 
-    public abstract boolean isPremiumkunde();
+    protected boolean isPremiumkunde;
 
-    public Kunde(String name,Adresse adresse,List<Bestellung> bestellungen,int ID){
+    public Kunde(String name,Adresse adresse,List<Bestellung> bestellungen){
         this.name = name;
         this.adresse = adresse;
 
         this.bestellungen = bestellungen;
-        this.ID = ID;
+
     }
 
 
-    public abstract void ergänzeBestellung(Bestellung bestellung);
+    public abstract void ergänzeBestellung(Bestellung... bestellung);
+
+    public List<Bestellung> getBestellungen() {
+        return bestellungen;
+    }
+    public abstract int wichtigkeit();
+
+    public Adresse getAdresse() {
+        return adresse;
+    }
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isPremiumkunde() {
+        return isPremiumkunde;
+    }
+
+    public void setPremiumkunde(boolean premiumkunde) {
+        isPremiumkunde = premiumkunde;
+    }
 }
